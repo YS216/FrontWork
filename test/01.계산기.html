@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>계산기</title>
+</head>
+<body>
+	<script>
+		let again = true;
+		while (again == true) {
+			let input1 = window.prompt('숫자를 입력하세요');
+			let op = window.prompt('연산기호를 입력하세요 (+, -, *, /, %)');
+			let input2 = window.prompt('숫자를 입력하세요');
+
+			input1 = parseInt(input1);
+			input2 = parseInt(input2);
+
+			let result;
+
+			if (op == "+") {
+				result = input1 + input2
+			} else if (op == "-") {
+				result = input - input2
+			} else if (op == "*") {
+				result = input1 * input2
+			} else if (op == "/") {
+				result = input1 / input2
+			} else if (op == "%") {
+				result = input1 % input2
+			} else {
+				result = "지원하지 않는 연산기호 입니다."
+			}
+
+			alert(result);
+
+			again = confirm("계속")
+		}
+	</script>
+	
+</body>
+</html>
